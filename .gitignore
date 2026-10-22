@@ -1,0 +1,6 @@
+target/
+.env
+.env.*
+
+# capturas de Slack real (datos privados del workspace)
+docs/capturas/

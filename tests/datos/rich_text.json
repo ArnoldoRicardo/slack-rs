@@ -1,0 +1,59 @@
+{
+  "ts": "1718000000.000100",
+  "user": "U1",
+  "text": "texto de respaldo",
+  "blocks": [
+    {
+      "type": "rich_text",
+      "block_id": "b1",
+      "elements": [
+        {
+          "type": "rich_text_section",
+          "elements": [
+            { "type": "text", "text": "Hola " },
+            { "type": "user", "user_id": "U1" },
+            { "type": "text", "text": ", mira ", "style": { "bold": true, "italic": true } },
+            { "type": "link", "url": "https://x.mx", "text": "esto" },
+            { "type": "text", "text": " en " },
+            { "type": "channel", "channel_id": "C1" },
+            { "type": "text", "text": " " },
+            { "type": "emoji", "name": "thumbsup", "unicode": "1f44d" },
+            { "type": "text", "text": " " },
+            { "type": "broadcast", "range": "here" },
+            { "type": "text", "text": "\n" }
+          ]
+        },
+        {
+          "type": "rich_text_list",
+          "style": "ordered",
+          "indent": 0,
+          "elements": [
+            { "type": "rich_text_section", "elements": [{ "type": "text", "text": "uno" }] },
+            {
+              "type": "rich_text_section",
+              "elements": [{ "type": "text", "text": "dos", "style": { "code": true } }]
+            }
+          ]
+        },
+        {
+          "type": "rich_text_quote",
+          "elements": [{ "type": "text", "text": "citado", "style": { "strike": true } }]
+        },
+        {
+          "type": "rich_text_preformatted",
+          "elements": [
+            { "type": "text", "text": "let x = 1;\n" },
+            { "type": "link", "url": "https://y.mx" }
+          ]
+        },
+        {
+          "type": "rich_text_section",
+          "elements": [
+            { "type": "emoji", "name": "logo-empresa" },
+            { "type": "date", "timestamp": 1718000000, "format": "{date}" }
+          ]
+        }
+      ]
+    }
+  ]
+}

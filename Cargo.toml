@@ -1,0 +1,29 @@
+[package]
+name = "slack-rs"
+version = "0.1.0"
+edition = "2024"
+description = "Cliente de escritorio de Slack en Rust con iced (no oficial, proyecto detenido)"
+license = "MIT"
+publish = false
+
+[dependencies]
+iced = { version = "0.14", features = ["tokio", "image"] }
+reqwest = { version = "0.13", features = ["json", "form"] }
+tokio = { version = "1", features = ["time", "macros", "process"] }
+tokio-tungstenite = { version = "0.30", features = ["rustls-tls-webpki-roots"] }
+futures = "0.3"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+chrono = { version = "0.4", default-features = false, features = ["clock"] }
+emojis = "0.9"
+image = { version = "0.25", default-features = false, features = ["png"] }
+rfd = { version = "0.17.2", default-features = false, features = ["gtk3"] }
+notify-rust = "4.18.2"
+
+[features]
+# Recarga en caliente para desarrollo: `SLACK_DEMO=1 cargo hot --features hot`
+hot = ["iced/hot"]
+
+[dev-dependencies]
+tokio = { version = "1", features = ["rt", "rt-multi-thread", "macros"] }
+wiremock = "0.6"
